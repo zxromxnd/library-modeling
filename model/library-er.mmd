@@ -1,0 +1,43 @@
+erDiagram
+    direction TB
+
+    Автор {
+        int author_id PK
+        string given_name "необов'язкове"
+        string family_name "необов'язкове"
+        string pen_name "необов'язкове"
+    }
+
+    Видання {
+        int edition_id PK
+        string title
+        string language
+        int publication_year "необов'язкове"
+        string publisher_name "необов'язкове"
+    }
+
+    Примірник {
+        int inventory_number PK
+        int edition_id FK
+    }
+
+    Читач {
+        int reader_id PK
+        string given_name
+        string family_name
+        string phone
+    }
+
+    Видача {
+        int loan_id PK
+        int reader_id FK
+        int inventory_number FK
+        date issued_on
+        date due_on
+        date returned_on "необов'язкове"
+    }
+
+    Автор }o..|{ Видання : "є автором"
+    Видання ||..|{ Примірник : "має"
+    Примірник ||..o{ Видача : "фігурує у"
+    Читач ||..o{ Видача : "отримує"

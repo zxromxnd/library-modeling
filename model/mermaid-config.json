@@ -1,0 +1,9 @@
+{
+  "theme": "neutral",
+  "fontFamily": "Arial, sans-serif",
+  "er": {
+    "diagramPadding": 24,
+    "entityPadding": 16,
+    "fontSize": 16
+  }
+}

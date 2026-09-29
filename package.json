@@ -1,0 +1,8 @@
+{
+  "name": "library-modeling",
+  "private": true,
+  "description": "Інструмент рендеру навчальної ER-моделі бібліотеки",
+  "devDependencies": {
+    "mermaid": "12.0.0"
+  }
+}
